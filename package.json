@@ -1,0 +1,28 @@
+{
+	"name": "tm-web",
+	"version": "1.0.1",
+	"description": "项目目的：减少重复性的工作。优势：自动路由、组件、vue 模块 import、纯静态部署、服务器渲染等等等等...完整的后端管理模板，极简配置，一看就懂。",
+	"main": "index.js",
+	"scripts": {
+		"base": "tsc && npm link"
+	},
+	"bin": {
+		"tm-web": "./index.js"
+	},
+	"keywords": [
+		"nuxt3-vue3-templates",
+		"nuxt3",
+		"vue3",
+		"templates",
+		"admin-templates",
+		"零难度上手"
+	],
+	"author": "zhangrongliang@aliyun.com",
+	"license": "ISC",
+	"dependencies": {
+		"commander": "^10.0.0",
+		"ejs": "^3.1.9",
+		"inquirer": "^8.0.0",
+		"metalsmith": "^2.5.1"
+	}
+}
