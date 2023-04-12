@@ -1,0 +1,6 @@
+.nuxt
+.husky
+node_modules
+dist
+.output
+tsconfig.json

@@ -1,0 +1,59 @@
+[
+	{
+		"title": "首页",
+		"index": "/",
+		"icon": "HomeOutlined"
+	},
+	{
+		"title": "table",
+		"index": "1",
+		"icon": "DeploymentUnitOutlined",
+		"children": [
+			{
+				"title": "班级管理",
+				"index": "/class"
+			},
+			{
+				"title": "VR 管理",
+				"index": "/class-vr"
+			}
+		]
+	},
+	{
+		"title": "题库管理",
+		"index": "2",
+		"icon": "ReconciliationOutlined",
+		"children": [
+			{
+				"title": "理论题库",
+				"index": "/theory"
+			}
+		]
+	},
+	{
+		"title": "人员管理",
+		"index": "3",
+		"icon": "TeamOutlined",
+		"children": [
+			{
+				"title": "管理员管理",
+				"index": "/manager"
+			}
+		]
+	},
+	{
+		"title": "基础数据管理",
+		"index": "4",
+		"icon": "SettingOutlined",
+		"children": [
+			{
+				"title": "角色管理",
+				"index": "/role"
+			},
+			{
+				"title": "日志管理",
+				"index": "/log"
+			}
+		]
+	}
+]

@@ -1,9 +1,3 @@
-# 安装
-
-```bash
-npm init tm@latest
-```
-
 # 👋 vue3-nuxt3-templates
 
 - 项目目的：减少重复性的工作
