@@ -1,7 +1,7 @@
 # 安装
 
 ```bash
-npm install tm-web -g
+npm init tm-web@latest
 ```
 
 # 👋 vue3-nuxt3-templates

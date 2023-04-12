@@ -1,17 +1,26 @@
 #! /usr/bin/env node
 
-const { program } = require('commander')
 const inquirer = require('inquirer')
 const path = require('path')
 const Metalsmith = require('metalsmith')
 const ejs = require('ejs')
 const ora = require('ora')
 
-const handleCreate = (params, options) => {
-	console.log(params, options)
+const handleCreate = () => {
 	// 用户交互
 	inquirer
 		.prompt([
+			{
+				type: 'input',
+				name: 'name',
+				message: 'project name?',
+				default: 'vue3-nuxt3',
+			},
+			{
+				type: 'input',
+				name: 'destination',
+				message: 'project destination?',
+			},
 			{
 				type: 'input',
 				name: 'author',
@@ -28,8 +37,8 @@ const handleCreate = (params, options) => {
 			//根据回答以及选项，参数来生成项目文件
 			const processGenFiles = ora('Create project……')
 			processGenFiles.start() // 进度条开始
-			await genFiles({ ...answers, ...params, ...options })
-			processGenFiles.succeed(`Create project complete: ${params.name}`)
+			await genFiles(answers)
+			processGenFiles.succeed(`Create project complete: ${answers.name}`)
 		})
 		.catch(error => {
 			console.error(error)
@@ -73,13 +82,4 @@ const genFiles = options => {
 		})
 }
 
-program
-	.command('create <name> [destination]')
-	.description('create a project')
-	.action((name, destination) => {
-		handleCreate({ name, destination }, program.opts())
-	})
-
-program.option('-ig,--initgit', 'init git')
-
-program.parse(process.argv)
+handleCreate()
