@@ -18,6 +18,7 @@
 	"author": "zhangrongliang@aliyun.com",
 	"license": "ISC",
 	"dependencies": {
+		"@nuxt/image-edge": "^1.0.0-28050764.aaee7ac",
 		"commander": "^10.0.0",
 		"ejs": "^3.1.9",
 		"inquirer": "^8.0.0",
