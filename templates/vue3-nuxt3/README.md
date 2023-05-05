@@ -1,12 +1,12 @@
-# 👋 vue3-nuxt3-templates
+# 👋 Vue3 + Nuxt3 + Ant Design Vue
 
-- 项目目的：减少重复性的工作
+- 减少重复性的工作
 - 开发前建议通读本文
-- Vue3 + Nuxt3 + Ant Design Vue
+- 使用 yarn 做包管理器，使用 yarn 做包管理器，使用 yarn 做包管理器
 
 ## 模板优势
 
-> - 项目结构采用最简单的配置，可拓展性超好
+> - 项目结构采用最简单的配置
 > - 可打包完全静态页面
 > - 可打包成服务器渲染
 > - 自动生成路由
@@ -133,10 +133,11 @@ console.log(route.params)
 - [Nuxt 3 官网](https://nuxt.com/)
 - [官方目录结构文档资料](https://nuxt.com/docs/guide/directory-structure/nuxt)
 - [模块列表](https://nuxt.com/modules) nuxt3 专用模块查询
+- [@nuxt/image-edge](https://v1.image.nuxtjs.org/) nuxt3 官方图像优化
+- [@nuxtjs/color-mode](https://color-mode.nuxtjs.org/) 自动检测系统深浅色模式
 - [Ant Design of Vue](https://antdv.com/docs/vue/introduce-cn) Vue3 组件库
 - [pinia](https://pinia.vuejs.org/zh/) 状态管理库
 - [VueUse](https://vueuse.org/) 提高 vue 开发效率
-- [nuxtjs/color-mode](https://color-mode.nuxtjs.org/) 自动检测系统深浅色模式
 - [axios-http](https://axios-http.com/zh/docs/intro) promise 网络请求库
 - [mock.js](http://mockjs.com/) 生成随机数据，拦截 Ajax 请求
 
@@ -169,31 +170,34 @@ console.log(route.params)
 ## 目录结构
 
 ```
-├─ assets                                              // 资源目录
-│  ├─ js
-│  ├─ json
-│  │  └─ menu.json                                     // 菜单默认文件，无具体意义
-│  └─ scss
-│     └─ base.scss                                     // 项目全局样式或变量参考
-├─ components                                          // 组件目录-默认自动导入
-├─ fetch                                               // 接口文档存放目录
-├─ layouts                                             // 布局目录
-│  └─ default.vue                                      // 默认布局文件（详情见开发指南）
-├─ pages                                               // 路由目录-默认自动生成
-├─ plugins                                             // 插件目录-默认自动导入
-│  ├─ ant-design-vue.js                                // antdv 组件库
-│  └─ mock.js                                          // mock.js 拦截 Ajax 请求，返回模拟数据
-├─ public                                              // 公共文件目录，不参与编译优化
-├─ stores                                              // 状态管理目录
-├─ nuxt.config.ts                                       // nuxt 配置文件
-├─ package.json                                        // 配置应用程序和模块
-├─ .editorconfig                                        // eslint 配置文件
-├─ .eslintrc.js                                        // eslint 配置文件
-├─ .gitignore                                          // git 忽略内容配置文件
-├─ .husky                                              // git hooks
-├─ .prettierignore                                     // prettier 配置忽略文件
-├─ .prettierrc.js                                      // prettier 配置
-├─ README.md                                           // 项目介绍
-├─ tsconfig.json                                        // ts 配置文件
-└─ yarn.lock                                           // 项目依赖缓存
+├─ assets                              // 资源目录
+│  ├─ font                             // 自定义字体目录
+│  ├─ json														 // json 资源存放目录
+│  │  └─ menu.json                     // 左侧菜单数据
+│  ├─ less                             // 样式统一管理的部分目录
+│  │  ├─ ant.less                      // 重置部分组件库样式
+│  │  ├─ base.less                     // nuxt.config.ts，在页面加载时使用的样式
+│  │  ├─ index.less                    // 首页样式
+│  │  ├─ layout-default.less           // 默认布局样式
+│  │  └─ table.less                    // table 组件样式
+│  └─ tsx                              // tsx 文件目录，因在 pages 目录下写 tsx 在 nuxt 3.3.3 版本中重新编译时会报错，故如此处理
+├─ components                          // 组件目录，自动挂在组件
+├─ fetch                               // 接口文档存放目录
+├─ layouts                             // 布局目录
+├─ pages                               // 页面路由目录，自动生成路由
+├─ plugins                             // 插件目录
+├─ public                              // 公共文件目录
+├─ stores                              // 状态管理目录
+├─ nuxt.config.ts                       // nuxt 配置文件
+├─ package.json                        // 配置应用程序和模块
+├─ .editorconfig                        // eslint 配置文件
+├─ .eslintrc.js                        // eslint 配置文件
+├─ .gitignore                          // git 忽略内容配置文件
+├─ .husky                              // git hooks
+├─ .prettierignore                     // prettier 配置忽略文件
+├─ .prettierrc.js                      // prettier 配置
+├─ README.md                           // 项目介绍
+├─ tsconfig.json                        // ts 配置文件
+└─ yarn.lock                           // 项目依赖缓存
+
 ```

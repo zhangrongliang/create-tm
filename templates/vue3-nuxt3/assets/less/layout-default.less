@@ -1,0 +1,193 @@
+html,
+body {
+	background-color: @color-bg !important;
+}
+
+// text
+.text-danger {
+	color: var(--ant-warning-color);
+	&:hover {
+		color: var(--ant-warning-color-active);
+	}
+}
+
+.flex-grow {
+	flex-grow: 1;
+}
+
+.tm-admin-layout {
+	display: flex;
+	flex-wrap: wrap;
+	.tm-admin-layout-header {
+		display: flex;
+		align-items: center;
+		height: @layout-height;
+		background-color: @color-bg;
+		width: 100%;
+		.tm-admin-layout-logo {
+			display: flex;
+			align-items: center;
+			height: @layout-height;
+			padding: @padding @padding @padding calc(@padding * 1.3);
+			font-weight: bold;
+			font-size: 18px;
+			@defaultNum: 21%;
+			@defaultTime: 8s;
+			h1 {
+				text-indent: calc(@padding * 2);
+				font-size: 26px;
+				margin: 0;
+				position: relative;
+				&::before {
+					// background: @primary-color;
+					color: @primary-color;
+					overflow: hidden;
+					position: absolute;
+					top: 0;
+					left: 0;
+					bottom: 0;
+					right: 0;
+					clip-path: polygon(0 0, @defaultNum 0, @defaultNum 100%, 0 100%);
+					content: '口口口 口口口口口口口口口口';
+					animation: index-slide-h1 @defaultTime ease 0s infinite;
+				}
+				@keyframes index-slide-h1 {
+					0% {
+						clip-path: polygon(0 0, @defaultNum 0, @defaultNum 100%, 0 100%);
+					}
+					50% {
+						clip-path: polygon(85% 0, 100% 0, 100% 100%, 85% 100%);
+					}
+					to {
+						clip-path: polygon(0 0, @defaultNum 0, @defaultNum 100%, 0 100%);
+					}
+				}
+			}
+		}
+		.tm-admin-layout-header-right {
+			display: flex;
+			align-items: center;
+			padding: @padding;
+			cursor: pointer;
+			font-size: 14px;
+			height: 100%;
+			&:hover {
+				color: @primary-color;
+				background: rgba(0, 0, 0, 0.018);
+			}
+			.anticon {
+				margin-right: calc(@padding / 2);
+			}
+			img {
+				width: 20px;
+				height: 20px;
+			}
+			.iconfont {
+				font-size: 18px;
+			}
+		}
+	}
+	// left
+	.tm-admin-layout-left {
+		.tm-admin-ant-menu {
+			width: 240px;
+			padding: 0 calc(@padding - 2px);
+			border-right: none;
+			height: calc(100vh - @layout-height);
+			overflow-y: auto;
+			overflow-x: hidden;
+			background-color: @color-bg;
+			&.ant-menu-inline-collapsed {
+				width: 60px;
+			}
+			// 自定义菜单样式
+			.ant-menu-submenu.ant-menu-submenu-selected {
+				color: @heading-color;
+			}
+			// 首页菜单样式
+
+			& > .ant-menu-item.ant-menu-item-selected,
+			.ant-menu-submenu.ant-menu-submenu-selected .ant-menu-submenu-title {
+				color: @primary-color;
+				background-color: #fff;
+				box-shadow: @box-shadow-base;
+				border-radius: @border-radius-base;
+				font-weight: bold;
+				&::after {
+					display: none;
+				}
+				&:hover {
+					color: @primary-color;
+				}
+				.ant-menu-item-icon {
+					color: @primary-color;
+				}
+			}
+			.ant-menu-submenu-title,
+			.ant-menu-item {
+				height: 46px;
+				line-height: 46px;
+			}
+		}
+
+		.ant-menu-item-selected {
+			font-weight: bold;
+		}
+	}
+	// right
+	.tm-admin-layout-right {
+		flex: 1;
+		width: calc(100vw - 200px);
+		padding-left: calc(@padding - 2px);
+		overflow: hidden;
+		background: #000;
+		background-color: @color-bg;
+		// 头部页面名称
+		.tm-admin-layout-breadcrumb {
+			display: flex;
+			height: @layout-footer;
+			position: relative;
+			z-index: 1;
+			align-items: center;
+			flex-wrap: wrap;
+			h2 {
+				font-size: 20px;
+				margin: 0;
+				color: @text-color;
+			}
+			.ant-breadcrumb,
+			.admin-menu-page-title {
+				font-size: 16px;
+				font-weight: bold;
+			}
+			.tm-admin-layout-online-num {
+				padding-right: @padding;
+				color: @disabled-color;
+				font-size: 12px;
+			}
+		}
+		// 主体内容
+		.tm-admin-layout-content {
+			border-radius: @border-radius-base;
+			margin-right: @padding;
+			max-height: calc(100vh - @layout-height - 32px);
+			overflow-y: auto;
+			overflow-x: hidden;
+			&.no-index-page {
+				height: calc(100vh - @layout-height - @layout-footer - @layout-footer);
+				box-shadow: @box-shadow-base;
+				background: #fff;
+				padding: calc(@padding * 2);
+			}
+		}
+		&.tm-admin-layout-right-index {
+			padding-left: 0;
+			.tm-admin-layout-breadcrumb {
+				padding-left: calc(@padding - 2px);
+			}
+			.tm-admin-layout-content {
+				padding-left: calc(@padding - 2px);
+			}
+		}
+	}
+}

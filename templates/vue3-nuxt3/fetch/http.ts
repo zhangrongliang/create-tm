@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { Dayjs } from 'dayjs'
 
 const baseUrl = process.env.NODE_ENV
 	? 'http://localhost:7890'
@@ -69,7 +70,7 @@ export const fetchStatistics = () => http.get('/statistics')
 // index table
 
 export const fetchClass = (query?: {
-	class: string
+	class: Dayjs | string
 	name: string
 	pageSize?: number | 10
 	currentPage: number | 1
@@ -81,7 +82,7 @@ export const fetchClass = (query?: {
 
 // 学员管理 table
 export const fetchClassStudent = (query?: {
-	class: string | number
+	class: Dayjs | string
 	name: string
 	number: string | number
 	pageSize?: number | 10
@@ -106,7 +107,7 @@ export const fetchClassStudentAll = (query?: {
 	)
 
 /**
- * VR 管理
+ * 口口 管理
  */
 export const fetchVr = (query?: {
 	name: string
