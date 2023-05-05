@@ -72,6 +72,9 @@ const genFiles = options => {
 					const newContents = ejs.render(str, options)
 					// 将新内容写到文件中
 					file.contents = Buffer.from(newContents)
+					console.log(str)
+					console.log(newContents)
+					return
 				}
 			})
 		})

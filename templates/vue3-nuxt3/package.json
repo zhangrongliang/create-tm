@@ -1,5 +1,7 @@
 {
 	"name": "nuxt3-vue3-templates",
+	"description": "",
+	"author": "",
 	"private": true,
 	"scripts": {
 		"build": "nuxt build",
