@@ -1,6 +1,6 @@
 {
 	"name": "create-tm",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"description": "专属于 TME 公司的前端模板列表",
 	"main": "index.js",
 	"scripts": {},

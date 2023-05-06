@@ -4,11 +4,17 @@
 npm init tm@latest
 ```
 
-# 👋 web 前端模板列表
+## 👋 泰盟软件 web 前端模板列表
 
-## vue3-nuxt3
-
-- Vue3 + Nuxt3 + Ant Design Vue
+- 通用模板(vue3 nuxt3，完全纯静态、SSR 服务器渲染、PWA 渐进式)
+- Vue3 基础模板
+- uniapp vue3 小程序模板
+- Unity 打包 WebGL 的模板
+- VSP 类型课件模板
+- 一屏课件模板 - 无后端
+- 一屏课件模板 - 有后端
+- 怡康 Vue3 项目模板
+- Vue2 基础模板
 
 ## vscode 插件
 
