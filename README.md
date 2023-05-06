@@ -1,7 +1,7 @@
 # 安装
 
 ```bash
-npm init tm@latest
+npm init tme@latest
 ```
 
 ## 👋 泰盟软件 web 前端模板列表
