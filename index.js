@@ -16,6 +16,9 @@ const handleCreate = () => {
 				message: 'project name?',
 				default: 'my-project',
 			},
+			/**
+			 * TODO 放置在 template 目录下的配合使用
+			 */
 			// {
 			// 	type: 'input',
 			// 	name: 'description',
@@ -76,15 +79,19 @@ const getCwd = () => process.cwd()
 
 // 下载模板
 const genFiles = options => {
-	//模版的目录
-	const templateSrc = path.resolve(__dirname, `./templates/${options.template}`)
-	//项目指定生成目录，如果命令中没有有配置目录，则在当前命令运行的目录下生成以项目名称为名字的新目录
-	const destination = options.destination
-		? path.resolve(options.destination)
-		: path.resolve(getCwd(), options.name)
+	/**
+	 * TODO 放置在 template 目录下的配合使用
+	 */
+	// //模版的目录
+	// const templateSrc = path.resolve(__dirname, `./templates/${options.template}`)
+	// //项目指定生成目录，如果命令中没有有配置目录，则在当前命令运行的目录下生成以项目名称为名字的新目录
+	// const destination = options.destination
+	// 	? path.resolve(options.destination)
+	// 	: path.resolve(getCwd(), options.name)
 
-	// 需要动态生成的文件
-	const renderPathList = ['package.json']
+	// // 需要动态生成的文件
+	// const renderPathList = ['package.json']
+
 	// vue3-nuxt3 模板
 	// if (options.template === 'vue3-nuxt3') {
 	// 	Metalsmith(__dirname)
