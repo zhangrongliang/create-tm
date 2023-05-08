@@ -1,18 +1,18 @@
 {
-	"name": "create-tme",
-	"version": "1.1.1",
-	"description": "专属于 TME 公司的前端模板列表",
+	"name": "create-te",
+	"version": "1.1.2",
+	"description": "前端模板列表",
 	"main": "index.js",
 	"scripts": {},
 	"bin": {
-		"tme-web": "./index.js"
+		"tm-web": "./index.js"
 	},
 	"keywords": [
 		"vue3",
-		"vue2",
 		"nuxt3",
-		"uni-app",
-		"templates"
+		"templates",
+		"ant-design-vue",
+		"element-plus"
 	],
 	"author": "zhangrongliang@aliyun.com",
 	"license": "ISC",
