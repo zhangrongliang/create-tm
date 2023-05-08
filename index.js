@@ -13,7 +13,7 @@ const handleCreate = () => {
 			{
 				type: 'input',
 				name: 'name',
-				message: '请输入项目名称',
+				message: 'Project Name:',
 				default: 'my-project',
 			},
 			/**
@@ -22,19 +22,19 @@ const handleCreate = () => {
 			{
 				type: 'input',
 				name: 'description',
-				message: 'project description?',
+				message: 'Project Description:',
 				default: 'zhangrongliang',
 			},
 			{
 				type: 'input',
 				name: 'author',
-				message: 'author name?',
+				message: 'Project Author:',
 				default: 'zhangrongliang',
 			},
 			{
 				type: 'list',
 				name: 'template',
-				message: '请选择项目模板',
+				message: 'Choose A Template',
 				choices: ['nuxt3-vue3-ant-design-vue', 'nuxt3-vue3-element-plus'],
 			},
 		])
