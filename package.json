@@ -1,6 +1,6 @@
 {
 	"name": "create-tm",
-	"version": "1.1.4",
+	"version": "1.1.5",
 	"description": "前端模板列表",
 	"main": "index.js",
 	"scripts": {},
@@ -19,7 +19,7 @@
 		"type": "github",
 		"url": "https://github.com/zhangrongliang/create-tm"
 	},
-	"homepage": "https://github.com/zhangrongliang/create-tm",
+	"homepage": "https://zhangrongliang.com/",
 	"license": "ISC",
 	"dependencies": {
 		"chalk": "4.1.2",
