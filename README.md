@@ -1,7 +1,7 @@
 # 安装
 
 ```bash
-npm init tme@latest
+npm init tm@latest
 ```
 
 ## 👋 前端模板列表
