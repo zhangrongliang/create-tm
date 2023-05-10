@@ -9,7 +9,7 @@ npm init tme@latest
 - nuxt3-vue3-ant-design-vue
 - nuxt3-vue3-element-plus
 - [vue-element-plus-admin](https://element-plus-admin-doc.cn/)，一套基于 vue3、element-plus、typesScript4、vite3 的后台集成方案
-- [ANTD PRO VUE](https://pro.antdv.com/)，Ant Design Pro 是一个企业级中后台前端/设计解决方案
+- [antd pro vue](https://pro.antdv.com/)，Ant Design Pro 是一个企业级中后台前端/设计解决方案
 
 ## vscode 插件
 

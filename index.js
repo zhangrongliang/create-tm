@@ -36,7 +36,7 @@ const handleCreate = () => {
 					'nuxt3-vue3-ant-design-vue',
 					'nuxt3-vue3-element-plus',
 					'vue-element-plus-admin',
-					'ANTD PRO VUE',
+					'antd pro vue',
 				],
 			},
 		])
@@ -124,7 +124,7 @@ const genFiles = options => {
 			).then(() => {
 				resolve()
 			})
-		} else if (options.template === 'ANTD PRO VUE') {
+		} else if (options.template === 'antd pro vue') {
 			clone(
 				'direct:https://github.com/vueComponent/ant-design-vue-pro.git',
 				options
